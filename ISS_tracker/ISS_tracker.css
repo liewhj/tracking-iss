@@ -1,0 +1,8 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.content {
+    border-bottom: solid black 2px;
+ width: 200px;
+}

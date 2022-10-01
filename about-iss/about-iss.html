@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>3d model</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.37.1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	
+	<link href="/about-iss/about-iss.css" rel="stylesheet">
+	<!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    
+    <!--  REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+     <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script> 
+
+    <!--  OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+	<!--     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script> -->
+
+    <!--  OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+	<!--     <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/ResizeObserver.js"></script> -->
+    
+    <!--  OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+	<!--
+   <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+	-->
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="titles"> <h1>International Space Station</h1></div>
+    </div>
+	<!-- 3D content for your site: -->
+
+    <model-viewer src="/about-iss/scene.gltf" alt="A 3D model of a car" shadow-intensity="1" camera-controls auto-rotate ar >
+    </model-viewer>
+
+
+    <div class="iss">
+        <div class="text">
+            <h1>What is ISS?</h1>
+            <p>The International Space Station (ISS) is the largest modular space station currently in low Earth orbit. It is 73 m long and 109 m wide.	It is a multinational collaborative project involving five participating space agencies: NASA (United States), Roscosmos (Russia), JAXA (Japan), ESA (Europe), and CSA (Canada). It maintains an orbit with an average altitude of 400 kilometres (250 mi) by means of reboost manoeuvres using the engines of the Zvezda Service Module or visiting spacecraft. The ISS circles the Earth in roughly 93 minutes, completing 15.5 orbits per day.</p>
+        </div>
+        <div class="text_img"><img src="../img/about-iss/international-logo.jpg"> </div>
+    </div>
+    <div class="use">
+        <div class="use_img"><img src="../img/about-iss/experiment.png">
+        </div>
+    <div class="boxes">
+    <div class="uses">
+        <h1>What is the functionality of ISS?</h1>
+        <p>The station serves as a microgravity and space environment research laboratory in which scientific research is conducted in astrobiology, astronomy, meteorology, physics, and other fields.</p>
+    </div>
+<div class="uses">
+    <h1>Why ISS important to us?</h1>
+    <p>The space station's labs are where crew members do research which is could not be done on Earth.Scientists study what happens to people when they live in space. NASA has a plan to send humans deeper into space than ever before. The space station is one of the first steps. NASA will use lessons from the space station to get astronauts ready for the journey ahead.</p>
+</div>
+    </div>
+</div>
+<div class="works"><div class="works_img"><img src="../img/about-iss/iss-parts.jpg"></div>
+<div class="how">
+<h1>How does ISS work?</h1>
+</div>
+<div class="list">
+    <ul>
+        <li>The first piece of equipment of the ISS was launched in 1998 and other parts and modules were added and assembled in space at different times.</li>
+        <li>The space station has many parts. The parts are called modules. The first modules had parts needed to make the space station work. Modules called "nodes" connect parts of the station to each other. Labs on the space station let astronauts do research.</li>
+        <li>On the sides of the space station are solar arrays. These arrays collect energy from the sun to turn sunlight into electricity.</li>
+       
+    </ul>
+</div>
+<div class="list">
+    <ul>
+        <li> Robot arms are attached outside to build the space station. They also can move astronauts around outside and control science experiments.</li>
+        <li>Docking ports are like doors, too. The ports allow visiting spacecraft to connect to the space station. New crews and visitors enter the station through the docking ports. The crew members use the ports to move supplies onto the station.</li>
+        <li>Airlocks on the space station are like doors. Astronauts use them to go outside on spacewalks.</li>
+    </ul>
+</div>
+<div class="fun">?</div>
+
+
+	<!-- 💁 Include both scripts below to support all browsers! -->
+
+	<!-- Loads <model-viewer> for modern browsers: -->
+	  <script type="module"
+		  src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+	  </script>
+
+	<!-- Loads <model-viewer> for old browsers like IE11: -->
+	<script nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Adding background image */
+body {
+    background-image: url("../img/discover-space/mainpage_background.jpg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Content box */
+.content-box {
+    width: 100%;
+}
+
+.content-box .row {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    animation: load 1s;
+}
+
+@keyframes load {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.content-box .row a .column {
+    height: 200px;
+    width: max-content;
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px  #000;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    padding: 20px;
+    transition: .2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-box .row a .column:hover {
+    margin-bottom: 20px;
+}
+
+.content-box .row a .column i,
+.content-box .row a .column h3 {
+    margin: 20px 0px;
+    color: #FFF;
+}
+
+.content-box .row a .column i {
+    font-size: 50px;
+}
+
+.content-box .row a .column h3 {
+    font-size: 25px;
+}
