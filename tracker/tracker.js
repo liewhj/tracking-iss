@@ -1,33 +1,3 @@
-/******************* DO NOT KACAU THIS PART *******************/
-// Create a WorldWindow for the canvas.
-var wwd = new WorldWind.WorldWindow("canvasOne");
-
-
-wwd.addLayer(new WorldWind.BMNGLayer());
-
- // wwd.addLayer(new WorldWind.CompassLayer());
-    // wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
-    wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
-    wwd.navigator.range = 30e6;
-    wwd.navigator.lookAtLocation.latitude = 0;
-    wwd.navigator.lookAtLocation.longitude = 0;
-
-
-    var modelLayer = new WorldWind.RenderableLayer();
-wwd.addLayer(modelLayer);
-
-var position = new WorldWind.Position(10.0, -125.0, 800000.0);
-var config = {dirPath: WorldWind.configuration.baseUrl + '/tracker/iss-model'};
-
-var colladaLoader = new WorldWind.ColladaLoader(position, config);
-colladaLoader.load("iss.dae", function (colladaModel) {
-    colladaModel.scale = 9000;
-    modelLayer.addRenderable(colladaModel);
-});
-
-
-
-
 // Get ISS location
 const api_url='https://api.wheretheiss.at/v1/satellites/25544';
 async function getISS(){
@@ -43,11 +13,43 @@ async function getISS(){
     console.log(altitude);
     console.log(velocity);
 
-   
+    // Add a placemark
+    var placemarkLayer = new WorldWind.RenderableLayer();
+wwd.addLayer(placemarkLayer);
 
-   
+var placemarkAttributes = new WorldWind.PlacemarkAttributes(null);
+
+placemarkAttributes.imageOffset = new WorldWind.Offset(
+    WorldWind.OFFSET_FRACTION, 0.3,
+    WorldWind.OFFSET_FRACTION, 0.0);
+
+placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
+    WorldWind.OFFSET_FRACTION, 0.5,
+    WorldWind.OFFSET_FRACTION, 1.0);
+
+placemarkAttributes.imageSource = "/tracker/iss-model/iss.png";
+
+var position = new WorldWind.Position(latitude, longitude, altitude/10);
+var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
+
+placemark.alwaysOnTop = true;
+
+placemarkLayer.addRenderable(placemark);
 
 }
+
+// Create a WorldWindow for the canvas.
+var wwd = new WorldWind.WorldWindow("canvasOne");
+
+
+wwd.addLayer(new WorldWind.BMNGLayer());
+
+ // wwd.addLayer(new WorldWind.CompassLayer());
+    // wwd.addLayer(new WorldWind.CoordinatesDisplayLayer(wwd));
+    wwd.addLayer(new WorldWind.ViewControlsLayer(wwd));
+    wwd.navigator.range = 30e6;
+    wwd.navigator.lookAtLocation.latitude = 0;
+    wwd.navigator.lookAtLocation.longitude = 0;
 
 getISS()
 setInterval(getISS,1800)

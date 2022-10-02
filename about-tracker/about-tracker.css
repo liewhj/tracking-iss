@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 html{
-    font-family: 'Ubuntu Mono', monospace;
+    
 }
 
 body{
@@ -11,6 +12,7 @@ body{
 background: linear-gradient(244.91deg, #333333 0%, #0A0A0A 82.32%);
 margin-left: auto;
 margin-right: auto;
+
 }
 
 
@@ -22,6 +24,7 @@ canvas{
     font-size: 50px;
     color: #FAFF00;
     font-weight: 400;
+    font-family: 'Silkscreen', cursive;
     
 }
 .title {
@@ -42,6 +45,7 @@ canvas{
 }
 .title span{
     color: purple;
+    font-family: 'Silkscreen', cursive;
 }
 
 .bcak{
@@ -72,6 +76,7 @@ filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     color: white;
     z-index: 10;
     font-size: x-large;
+    font-family: 'Silkscreen', cursive;
 }
 .isszarya{
 position:absolute;
@@ -91,6 +96,7 @@ margin-right: auto;
 border: solid;
 padding-top:15px;
 padding-bottom:15px;
+
 }
 .zarya{
 width: 580px;
@@ -105,17 +111,19 @@ color: white;
  padding-left:100px;
  padding-right:100px;
  padding-top:20px;
+ 
 }
 .text h1,p{
     color:white;
     text-align: center;
+    font-family: 'Silkscreen', cursive;
     
 }
 .text h1{
-    font-size:xx-large;
+    font-size:x-large;
 }
 .text p{
-    font-size: x-large;
+    font-size: large;
     margin-top: 150px;
 }
 .icons {
