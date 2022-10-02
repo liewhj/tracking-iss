@@ -27,9 +27,16 @@ placemarkAttributes.labelAttributes.offset = new WorldWind.Offset(
     WorldWind.OFFSET_FRACTION, 0.5,
     WorldWind.OFFSET_FRACTION, 1.0);
 
-placemarkAttributes.imageSource = "/tracker/iss-model/iss.png";
+placemarkAttributes.imageSource = "/tracker/iss-model/DOOT.png";
 
 var position = new WorldWind.Position(latitude, longitude, altitude/10);
+
+function deleteISS() {
+    var position = new WorldWind.Position(latitude, longitude, -2);
+}
+
+deleteISS()
+setInterval(deleteISS, 1800)
 var placemark = new WorldWind.Placemark(position, false, placemarkAttributes);
 
 placemark.alwaysOnTop = true;
