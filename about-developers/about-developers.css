@@ -21,9 +21,11 @@
           }
     
           .swiper-slide {
+            backdrop-filter: blur(10px);
             text-align: center;
             font-size: 18px;
-            background: #fff;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
     
             /* Center slide text vertically */
             display: -webkit-box;
