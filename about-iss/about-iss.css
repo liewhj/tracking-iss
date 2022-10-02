@@ -159,6 +159,7 @@ li {
     width: 400px;
 }
 .fun {
+    cursor: pointer;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -173,5 +174,53 @@ li {
     position: fixed;
     right: 20px;
     bottom: 20px;
+
 }
-    
+#fact {
+    font-family: 'Noto Sans Mono', monospace;
+    border: none;
+    background-color: orange;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    width: 600px;
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    text-align: justify;
+    color: white;
+    display: none;
+}
+.fatcs {
+    width: 300px;
+}
+#fact h1{
+    font-size: large;
+}
+#fact p{
+font-size: medium;
+}
+#cancle {
+    float: right;
+    background-color: orange;
+    border: none;
+    color: white;
+    font-weight: 1000;
+}
+.fun_img img{
+    width: 300px;
+}
+.arr {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icons {
+    position: absolute;
+    display: inline;
+    color: white;
+    z-index: 100;
+    font-size: 25pt;
+    right: 30px;
+    top:13px;
+}

@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-	<title>3d model</title>
+	<title>About ISS | ABOUT</title>
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.37.1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	
 	<link href="/about-iss/about-iss.css" rel="stylesheet">
+    <link rel="stylesheet" href="/general/general.css">
 	<!-- The following libraries and polyfills are recommended to maximize browser support -->
     <!-- NOTE: you must adjust the paths as appropriate for your project -->
     
@@ -25,11 +26,16 @@
 	<!--
    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
 	-->
+
+    <!-- Link to font awesome -->
+    <script src="https://kit.fontawesome.com/a9d75ce902.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="navbar">
-        <div class="titles"> <h1>International Space Station</h1></div>
+        <a href="../nav/nav.html"> <div class="icons"><abbr title="Navigation bar"><i class="fa-solid fa-bars"></i></abbr></div> </a>
+        <div class="titles"> <h1>International Space Station</h1> </div>
+        
     </div>
 	<!-- 3D content for your site: -->
 
@@ -76,8 +82,20 @@
         <li>Docking ports are like doors, too. The ports allow visiting spacecraft to connect to the space station. New crews and visitors enter the station through the docking ports. The crew members use the ports to move supplies onto the station.</li>
         <li>Airlocks on the space station are like doors. Astronauts use them to go outside on spacewalks.</li>
     </ul>
+</div> 
+
+<abbr title="Fun facts"><button class="fun" id="fun" onclick="funs()">?</button></abbr>
+<div id="fact">
+        <button id="cancle" onclick="bye()">X</button>
+        <div class="arr">
+        <div class="fatcs">
+            <h1>Fun Fact!</h1>
+            <p>India plans to have its own space station and its modalities will be submitted to the government by the Indian Space Research Organisation (ISRO) after the Gaganyaan Mission. The proposed space station is envisaged to weigh 20 tonnes and serve as a facility where astronauts can stay for 15-20 days, and it would be placed in an orbit 400 km above the earth.</p>
+        </div>
+        <div class="fun_img"><img src="../img/about-iss/indian.png"></div>
+    </div>
 </div>
-<div class="fun">?</div>
+
 
 
 	<!-- 💁 Include both scripts below to support all browsers! -->
@@ -91,6 +109,8 @@
 	<script nomodule
       src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
 	</script>
+
+    <script src="/about-iss/about-iss.js" type="text/javascript"></script>
 </body>
 
 </html>

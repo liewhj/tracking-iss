@@ -45,4 +45,13 @@
             width: 1400px;
             height: 500px;
           }
+          .icons {
+            position: absolute;
+            display: inline;
+            color: white;
+            z-index: 100;
+            font-size: 25pt;
+            right: 30px;
+            top:13px;
+        }
 
